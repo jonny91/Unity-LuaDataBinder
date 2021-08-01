@@ -54,27 +54,27 @@
   <ItemGroup>
      <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Object.cs" />
      <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Type.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_GameObject.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_EventObject.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_Input.cs" />
      <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaMethod.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Enum.cs" />
-     <Compile Include="Assets\ToLua\Editor\ToLuaMenu.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaProperty.cs" />
      <Compile Include="Assets\ToLua\Injection\Editor\ToluaInjectionBlackListPanel.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Delegate.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_String.cs" />
+     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Enum.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_RectTransform.cs" />
+     <Compile Include="Assets\ToLua\Editor\ToLuaTree.cs" />
+     <Compile Include="Assets\ToLua\Editor\ToLuaMenu.cs" />
+     <Compile Include="Assets\ToLua\Injection\Editor\ToLuaInjectionHelper.cs" />
      <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_Object.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaField.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_GameObject.cs" />
      <Compile Include="Assets\ToLua\Injection\Editor\CustomCecilRocks\MethodBodyRocks.cs" />
      <Compile Include="Assets\ToLua\Editor\ToLuaExport.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_String.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_RectTransform.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_EventObject.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaField.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaProperty.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Delegate.cs" />
      <Compile Include="Assets\ToLua\Injection\Editor\ToLuaText.cs" />
-     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
      <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaConstructor.cs" />
-     <Compile Include="Assets\ToLua\Editor\ToLuaTree.cs" />
      <Compile Include="Assets\ToLua\Injection\Editor\ToLuaInjection.cs" />
-     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_Input.cs" />
-     <Compile Include="Assets\ToLua\Injection\Editor\ToLuaInjectionHelper.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/2020.3.15f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -309,23 +309,23 @@
  <Reference Include="UnityEditor.iOS.Extensions">
  <HintPath>/Applications/Unity/2020.3.15f1c1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Debugger">
+ <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Assets/Plugins/Debugger.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
+ <Reference Include="CString">
+ <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Assets/Plugins/CString.dll</HintPath>
+ </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
- </Reference>
- <Reference Include="Debugger">
- <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Assets/Plugins/Debugger.dll</HintPath>
- </Reference>
- <Reference Include="CString">
- <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Assets/Plugins/CString.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -699,14 +699,14 @@
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/Jonny/Documents/Project/Unity-LuaDateBinder/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

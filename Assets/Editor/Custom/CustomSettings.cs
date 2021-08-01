@@ -5,6 +5,7 @@ using LuaInterface;
 using UnityEditor;
 using BindType = ToLuaMenu.BindType;
 using System.Reflection;
+using UnityEngine.UI;
 
 public static class CustomSettings
 {
@@ -56,6 +57,7 @@ public static class CustomSettings
         //_GT(typeof(TestExport.Space)),
         //-------------------------------------------------------------------        
 
+        _GT(typeof(Button.ButtonClickedEvent)),
         _GT(typeof(LuaInjectionStation)),
         _GT(typeof(InjectType)),
         _GT(typeof(Debugger)).SetNameSpace(null),
@@ -82,6 +84,7 @@ public static class CustomSettings
 
         _GT(typeof(Component)),
         _GT(typeof(Transform)),
+        _GT(typeof(RectTransform)),
         _GT(typeof(Material)),
         _GT(typeof(Light)),
         _GT(typeof(Rigidbody)),
@@ -150,8 +153,9 @@ public static class CustomSettings
         _GT(typeof(Resources)),
         _GT(typeof(LuaProfiler)),
 
-        _GT(typeof(XButton)),
-        _GT(typeof(XTextField)),
+        _GT(typeof(XButton)).SetBaseType(typeof(Button)),
+        _GT(typeof(XTextField)).SetBaseType(typeof(Text)),
+        _GT(typeof(ModuleManager)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

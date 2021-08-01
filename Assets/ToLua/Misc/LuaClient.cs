@@ -39,7 +39,6 @@ public class LuaClient : MonoBehaviour
 
     protected LuaState luaState = null;
     protected LuaLooper loop = null;
-    protected LuaFunction levelLoaded = null;
 
     protected bool openLuaSocket = false;
     protected bool beZbStart = false;
@@ -140,7 +139,6 @@ public class LuaClient : MonoBehaviour
     protected virtual void StartMain()
     {
         luaState.DoFile("Main.lua");
-        levelLoaded = luaState.GetFunction("OnLevelWasLoaded");
         CallMain();
     }
 
@@ -186,14 +184,6 @@ public class LuaClient : MonoBehaviour
 
     void OnLevelLoaded(int level)
     {
-        if (levelLoaded != null)
-        {
-            levelLoaded.BeginPCall();
-            levelLoaded.Push(level);
-            levelLoaded.PCall();
-            levelLoaded.EndPCall();
-        }
-
         if (luaState != null)
         {            
             luaState.RefreshDelegateMap();
@@ -223,12 +213,6 @@ public class LuaClient : MonoBehaviour
             DetachProfiler();
             LuaState state = luaState;
             luaState = null;
-
-            if (levelLoaded != null)
-            {
-                levelLoaded.Dispose();
-                levelLoaded = null;
-            }
 
             if (loop != null)
             {
