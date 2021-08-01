@@ -15,11 +15,4 @@ using UnityEngine;
 
 public class Demo : MonoBehaviour
 {
-    [SerializeField] private XButton Btn;
-
-    [SerializeField] private XTextField ResultText;
-
-    private void Awake()
-    {
-    }
 }

@@ -95,7 +95,10 @@
      <Compile Include="Assets\ToLua\Core\LuaTable.cs" />
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_EventObjectWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_UI_SelectableWrap.cs" />
+     <Compile Include="Assets\Source\Generate\UnityEngine_Events_UnityEventBaseWrap.cs" />
+     <Compile Include="Assets\Source\Generate\ModuleManagerWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_TrackedReferenceWrap.cs" />
+     <Compile Include="Assets\Source\Generate\UnityEngine_Events_UnityEventWrap.cs" />
      <Compile Include="Assets\ToLua\Reflection\LuaProperty.cs" />
      <Compile Include="Assets\Source\Generate\XTextFieldWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_ComponentWrap.cs" />
@@ -123,6 +126,7 @@
      <Compile Include="Assets\Source\Generate\UnityEngine_ShaderWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_AudioBehaviourWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_MaterialWrap.cs" />
+     <Compile Include="Assets\Source\Generate\UnityEngine_UI_Button_ButtonClickedEventWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_SpaceWrap.cs" />
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaFieldWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_Texture2DWrap.cs" />
@@ -137,8 +141,10 @@
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaMethodWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_AnimationWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_MeshRendererWrap.cs" />
+     <Compile Include="Assets\Source\Generate\UnityEngine_RectTransformWrap.cs" />
      <Compile Include="Assets\Source\Generate\LuaBinder.cs" />
      <Compile Include="Assets\ToLua\Core\TypeChecker.cs" />
+     <Compile Include="Assets\Scripts\ModuleManager.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_TextureWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_LightWrap.cs" />
      <Compile Include="Assets\ToLua\Injection\LuaInjectionStation.cs" />
@@ -179,12 +185,6 @@
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaConstructorWrap.cs" />
      <Compile Include="Assets\ToLua\Reflection\LuaField.cs" />
      <Compile Include="Assets\ToLua\BaseType\System_NullObjectWrap.cs" />
-     <Compile Include="Assets\Scripts\ModuleManager.cs" />
-     <Compile Include="Assets\Source\Generate\ModuleManagerWrap.cs" />
-     <Compile Include="Assets\Source\Generate\UnityEngine_RectTransformWrap.cs" />
-     <Compile Include="Assets\Source\Generate\UnityEngine_UI_Button_ButtonClickedEventWrap.cs" />
-     <Compile Include="Assets\Source\Generate\UnityEngine_Events_UnityEventBaseWrap.cs" />
-     <Compile Include="Assets\Source\Generate\UnityEngine_Events_UnityEventWrap.cs" />
      <None Include="Assets\ToLua\Lua\socket\http.lua" />
      <None Include="Assets\ToLua\Lua\slot.lua" />
      <None Include="Assets\ToLua\Lua\UnityEngine\RaycastHit.lua" />
