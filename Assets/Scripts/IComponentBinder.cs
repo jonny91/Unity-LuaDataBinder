@@ -7,6 +7,9 @@
  * 创建时间：  2021-08-01 00:07:44
 *************************************************************************************/
 
+using System;
+
 public interface IComponentBinder
 {
+    void Bind<T>(T value, T oldValue);
 }

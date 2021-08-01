@@ -15,12 +15,7 @@ using UnityEngine.UI;
 [DisallowMultipleComponent]
 public class XButton : Button, IComponentBinder
 {
-    protected override void Start()
+    public void Bind<T>(T value, T oldValue)
     {
-        base.Start();
-        onClick.AddListener(() =>
-        {
-            
-        });
     }
 }

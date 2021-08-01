@@ -12,5 +12,6 @@ function Main()
 
     local panel = require("SamplePanel")
     panel:Load()
+    panel:Start()
 end
 

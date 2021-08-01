@@ -8,21 +8,19 @@ local binder = require("Binder")
 local Panel = {}
 
 function Panel:Load()
-
     -- 数据绑定
     self.count_data = binder.data({ ["count"] = 0 })
-    binder.bind(self.count_data, "count", function(val, old_val)
-        self.result_text:GetComponent("XTextField").text = val
-    end)
 
     self.gameObject = ModuleManager.GetInstance():OpenSample()
     self.btn_go = self.gameObject.transform:Find("Button")
     self.result_text = self.gameObject.transform:Find("ResultText")
+end
 
+function Panel:Start()
+    binder.bind_component(self.count_data, "count", self.result_text)
     self.btn_go:GetComponent("XButton").onClick:AddListener(function(obj)
         -- 改变数据
         self.count_data.count = self.count_data.count + 1
-        print(self.count_data.count)
     end)
 end
 

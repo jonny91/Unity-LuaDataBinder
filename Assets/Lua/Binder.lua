@@ -45,4 +45,13 @@ function Binder.bind(table, key, func)
     return #binds
 end
 
+function Binder.bind_component(table, key, component_object)
+    local binder_component = component_object.gameObject:GetComponent("IComponentBinder")
+    if binder_component then
+        Binder.bind(table, key, function(value, old_value)
+            binder_component:Bind(value, old_value)
+        end)
+    end
+end
+
 return Binder

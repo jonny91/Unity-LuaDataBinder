@@ -9,9 +9,19 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class XTextField : Text, IComponentBinder
 {
+    public void Bind(string value, string oldValue)
+    {
+        Bind<string>(value, oldValue);
+    }
+
+    public void Bind<T>(T value, T oldValue)
+    {
+        this.text = value.ToString();
+    }
 }
